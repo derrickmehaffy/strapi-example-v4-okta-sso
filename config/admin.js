@@ -20,8 +20,6 @@ module.exports = ({ env }) => ({
                 strapi.admin.services.passport.getStrategyCallbackURL("okta"),
             },
             (accessToken, refreshToken, profile, done) => {
-              console.log("TESTING")
-              console.log(profile)
               done(null, {
                 email: profile.email,
                 username: profile.username,
